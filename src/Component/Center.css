@@ -1,0 +1,16 @@
+.btn1{
+    transition-duration: 1s;
+    width: 141px;
+    height: 34px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.btn1:hover{
+    background-color:  rgb(248, 236, 171);;
+}
+

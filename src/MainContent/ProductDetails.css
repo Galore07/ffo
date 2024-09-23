@@ -1,0 +1,18 @@
+.product-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-details img {
+    width: 50%;
+    height: auto;
+}
+
+.product-details h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.product-details p {
+    font-size: 18px;
+}
