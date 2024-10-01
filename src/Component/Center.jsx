@@ -4,7 +4,7 @@ import "../Component/Center.css"
 const Center = () => {
   return (
     
-   <center><button class="btn1">Go to Shop</button></center>
+   <center><button className="btn1">Go to Top</button></center>
     
   )
 }

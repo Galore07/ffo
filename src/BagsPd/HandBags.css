@@ -1,0 +1,52 @@
+.logoss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 15px;
+}
+
+.love{
+    width: 5%;
+    height: 55px;
+}
+
+.grid-boxes img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+
+@media (max-width: 768px){
+    .love{
+        width: 30%;
+        margin: 5px;
+    }
+
+    .logoss{
+        justify-content: center;
+        /* width: 95%; */
+        /* gap: 1px; */
+    }
+
+    .grid-boxes img {
+        object-fit: fill;
+        width: 100%;
+        height: 200px;
+    }
+    
+}
+
+@media (max-width: 480px){
+    .love{
+        width: 30%;
+        margin: 5px;
+    }
+    .logoss{
+        width: 95%;
+        gap: 5px;
+    
+}
+}

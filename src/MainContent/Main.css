@@ -13,13 +13,14 @@
 
 .grid-boxes img {
   width: 100%;
-  height: 200px;
+  height: 320px;
+  /* height: auto; */
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
 .product-info {
-  padding: 20px;
+  padding: 1px;
 }
 
 .product-info h3 {
@@ -31,6 +32,32 @@
   font-size: 16px;
   font-weight: bold;
   color: #666;
+}
+
+.bgs{
+  letter-spacing: 2px;
+  /* font-weight: bold; */
+  font-size: 16px;
+  margin: 25px;
+}
+
+.bgs:hover{
+  color: orange;
+  transition: 1s;
+}
+
+
+.line-container {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  flex-grow: 1; /* Makes the lines stretch */
+  border: none; /* Removes default border */
+  height: 1px; /* Sets the height of the lines */
+  background-color: black; /* Sets the color of the lines */
+  margin: 0 10px; /* Adds space between the lines and the text */
 }
 
 /* Responsive layout */

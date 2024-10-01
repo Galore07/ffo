@@ -9,10 +9,9 @@
 .grid-item {
     width: 25.33%;
     background-color: #eee;
-    padding: 15px;
+    padding: 11px;
     border: 1px solid #ddd;
-    /* margin: 20px; */
-    border-radius: 15px;
+    border-radius: 5px;
     position: relative;
 }
 
@@ -20,7 +19,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 3px;
 }
 
 .text-overlay {
@@ -50,4 +49,40 @@
 .grid-item:hover {
     transform: scale(0.9);
     transition: transform 0.5s ease;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .grid-con {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Increase gap for small screens */
+    }
+
+    .grid-item {
+        width: 96%; /* Full width with some margin */
+        margin: 0 auto; /* Center the item */
+        border-radius: 1%;
+        padding: 11px;
+    }
+
+    .grid-item img{
+        border-radius: 1%;
+    }
+
+    .text-overlay {
+        font-size: 2px; /* Adjust font size */
+        padding: 5px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay {
+        font-size: 30px; /* Smaller font size for very small screens */
+        width: 100px;
+        height: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 }

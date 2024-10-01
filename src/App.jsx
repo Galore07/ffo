@@ -8,6 +8,11 @@ import Main from './MainContent/Main';
 import ProductDetails from './MainContent/ProductDetails';
 import Footer from './Container/Footer';
 import ContactPage from './Pages/ContactPage';
+import Enhancement from './EnhancementPd/Enhancement';
+import Bags from './MainContent/Bags';
+import HandBags from './BagsPd/HandBags';
+import Featured from './FeaturedPd/Featured';
+import ProductInfos from './BagsPd/ProductInfos';
 
 
 const App = () => {
@@ -16,16 +21,21 @@ const App = () => {
       <div className='container'>
         <NavBar />
         <Routes>
-        <Route path="/" element={
+          <Route path="/" element={
             <>
               <HeroSection />
               <Middle />
               <Main />
+              <Bags />
               <Center />
             </>
           } />
-          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/featured" element={<Featured />} />
+          <Route path="/hand-bags" element={<HandBags />} />
+          <Route path="/enhancement-products" element={<Enhancement />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/product-info/:id" element={<ProductInfos />} />
         </Routes>
         <Footer />
       </div>

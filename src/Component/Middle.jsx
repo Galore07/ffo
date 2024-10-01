@@ -1,19 +1,24 @@
 import React from 'react'
 import "../Component/Middle.css"
+import { Link } from 'react-router-dom'
 
 const Middle = () => {
     return (
         <center>
-            <div class="featured-products">
-                <div>Featured Products</div>
+            <div className="featured-products">
                 <div className='look'>
-                    <button class="see">New Arrival</button>
-                    <button class="see">Best Selling</button>
-                    <button class="see">Check Reviews</button>
+                    <button className="see">New Arrival</button>
+                    
+                    <button className="see">
+                        <Link to="/featured"> Featured Products </Link>
+                    </button>
+
+                    <button className="see">Client Reviews</button>
+                    
                 </div>
             </div>
         </center>
-    )
-}
+    );
+};
 
 export default Middle

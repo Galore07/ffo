@@ -1,18 +1,55 @@
-.product-details {
-    padding: 20px;
-    text-align: center;
+.product-details{
+    display: flex;
 }
 
-.product-details img {
-    width: 50%;
-    height: auto;
+.nameee{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
-.product-details h3 {
-    font-size: 24px;
-    margin: 20px 0;
+.priceee{
+    font-weight: bold;
+    font-size: 19px;
+    /* color:  rgb(236, 73, 73); */
+    margin-top: 15px;
 }
 
-.product-details p {
-    font-size: 18px;
+.eptic{
+    background-color: black;
+    width: 150px;
+    height: 50px;
+    color: white;
+
+}
+
+.photo{
+    width: 45%;
+    height: 700px;
+    padding: 30px;
+    /* border: 5px solid #333; */
+}
+
+.mantra{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    height: 60px;
+    width: 200px;
+    gap: 2px;
+    /* border: 1px solid red; */ 
+}
+
+.number{
+    width: 40px;
+    height: 50px;
+    margin: 2px;
+    border-radius: 1px;
+    padding: 4px;
+    border: 2px solid  black;
+}
+
+.aura{
+    padding: 40px;
 }

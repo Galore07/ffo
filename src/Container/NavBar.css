@@ -18,11 +18,12 @@ nav {
     margin-right: 1px;
   }
   
-  .navbar-brand span {
+  .yale {
     font-size: 18px;
     font-family: monospace;
     letter-spacing: 3px;
-    color: rgb(247, 230, 135);
+    color: rgb(252, 167, 10);
+    font-weight: 600;
   }
   
   .navbar-menu {
@@ -35,7 +36,9 @@ nav {
   
   .navbar-menu li {
     margin-left: 20px;
-    font-size: 14px;
+    font-size: 15px;
+    /* font-weight: bold; */
+    
   }
 
   .navbar-menu-toggle span {
@@ -44,6 +47,17 @@ nav {
     background: white;
     margin: 2px 0;
   }
+
+  .navbar-menu li:hover{
+    color: rgb(252, 167, 10);
+    transition: 1s;
+  }
+
+  .house{
+    color: rgb(252, 167, 10);
+  }
+
+
 
   @media (max-width: 768px) {
     .navbar-menu-toggle {

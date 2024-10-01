@@ -11,25 +11,42 @@ const NavBar = () => {
     return (
         <nav>
             <div className="navbar-brand">
-                <img src={images.image5} className="Logo" alt="img" />
-                <span>ForeverFaith</span>
+                
+            <Link to="/">   <img src={images.image5} className="Logo" alt="img" /> </Link>
+                <Link to="/" className='yale'>ForeverFaith</Link>
+                
             </div>
-            {!menuOpen && ( 
-            <div className="navbar-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            {!menuOpen && (
+                <div className="navbar-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             )}
+
+            <i>
                 <ul className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
-                    <li>Home</li>
-                    <Link to="/contact">
-                        <li>Contact</li>
-                    </Link>
+
+                    <li>
+                        <Link to="/" className='house'>Home</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+
+
                     <li>Hairs</li>
-                    <li>HandBags</li>
-                    <li>Enhancement Product</li>
+
+                    <li>
+                        <Link to="/hand-bags">HandBags</Link>
+                    </li>
+
+                    <Link to="/enhancement-products">
+                        <li>Enhancement Product</li>
+                    </Link>
                 </ul>
+            </i>
         </nav>
     );
 };

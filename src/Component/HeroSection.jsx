@@ -1,35 +1,35 @@
-import React from 'react'
-import images from "../assets/Image"
-// import "../Component/HeroSection.css"
-import "../Component/Section.css"
-import "../Component/Center"
-import "../Component/Middle"
-import "../MainContent/Main"
-import "../Container/Footer"
+import React from 'react';
+import images from "../assets/Image";
+import "../Component/Section.css";
+// import "../MainContent/Main";
+// import "../Container/Footer";
+import Enhancement from '../EnhancementPd/Enhancement';
+import { Link } from 'react-router-dom';
 
 
 const HeroSection = () => {
     return (
 
-        <div class="grid-con">
+        <div className="grid-con">
 
-            <div class="grid-item">
-                <img src={images.image29} alt="" class="" />
-                <div class="text-overlay">Enhancement Products</div>
+            
+                <Link to="/enhancement-products" className="grid-item">
+                <img src={images.image29} alt="" className="" />
+                <div className="text-overlay">Enhancement Products</div>
+                </Link>
+            
 
-            </div>
+            <Link to="/" className="grid-item">
+                <img src={images.image10} alt="" className="" />
+                <div className="text-overlay">Hairs</div>
 
-            <div class="grid-item">
-                <img src={images.image10} alt="" class="" />
-                <div class="text-overlay">Hairs</div>
+            </Link>
 
-            </div>
+            <Link to="/hand-bags" className="grid-item">
+                <img src={images.image11} alt="" className="" />
+                <div className="text-overlay">Bags</div>
 
-            <div class="grid-item">
-                <img src={images.image11} alt="" class="" />
-                <div class="text-overlay">Bags</div>
-
-            </div>
+            </Link>
 
         </div>
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
 
 
 
-    )
-}
+    );
+};
 
 export default HeroSection
