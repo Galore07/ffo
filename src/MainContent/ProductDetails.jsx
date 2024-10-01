@@ -52,7 +52,7 @@ const ProductDetails = () => {
         <div className='aura'>
           <h3 className='nameee'>{product.name}</h3>
           <p className='priceee'>{product.price}</p>
-          <p>{product.description}</p>
+          {/* <p>{product.description}</p> */}
           <div className='mantra'>
             <input type="number" className='number' />
             <button className='eptic'>Add to Cart</button>

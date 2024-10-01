@@ -53,3 +53,67 @@
 .aura{
     padding: 40px;
 }
+
+
+
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center the content */
+    }
+
+    .photo {
+        width: 80%; /* Set the image width to 80% for small screens */
+        height: auto; /* Adjust the height automatically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .nameee, .priceee {
+        text-align: center; /* Center align the text */
+        font-size: 18px; /* Slightly smaller text */
+    }
+
+    .mantra {
+        width: 100%; /* Full width */
+        justify-content: center; /* Center the content */
+        /* align-items: center; */
+        margin-top: 20px; /* Add margin to the top */
+    }
+
+    .eptic {
+        width: 100%; /* Full width button */
+        height: 45px; /* Adjust button height */
+        margin-top: 15px; /* Add margin for spacing */
+    }
+}
+
+/* For extra small screens (up to 480px) */
+@media (max-width: 480px) {
+    .nameee {
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    .priceee {
+        font-size: 17px;
+    }
+
+    .photo {
+        width: 100%; /* Make the image take full width */
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .mantra {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .number {
+        width: 40px; /* Full width */
+        height: 40px;
+    }
+
+    .eptic {
+        width: 80%;
+        height: 50px;
+    }
+}
