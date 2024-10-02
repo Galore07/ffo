@@ -5,14 +5,14 @@ import images from '../assets/Image';
 
 
 const products = [
-    { id: 1, name: "BBL Set", price: "₦47,000.00", img: images.image25 },
-    { id: 2, name: "Butt/Hips Enlargement Pills", price: "₦6,500.00", img: images.image15 },
-    { id: 3, name: "Weight Gain Sirop", price: "₦12,500.00", img: images.image16 },
-    { id: 4, name: "Butt/Hips Enlargement Pills", price: "₦6,500.00", img: images.image17 },
-    { id: 6, name: "Curve Booster Sirop", price: "₦15,000.00", img: images.image19 },
-    { id: 9, name: "Breast Enhancement Pills", price: "₦17,500.00", img: images.image22 },
-    { id: 11, name: "Breast Enhancement Powder", price: "₦6,000.00", img: images.image24 },
-    { id: 12, name: "Breast Enhancement Oil", price: "₦89.99", img: images.image14 },
+    { id: 1, name: "Butt Gummies", price: "₦12,999.00", img: images.image25 },
+    { id: 2, name: "Butt/Hips Enlargement Pills", price: "₦6,999.00", img: images.image15 },
+    { id: 3, name: "Weight Gain Sirop", price: "₦12,999.00", img: images.image16 },
+    { id: 4, name: "Butt/Hips Enlargement Oil", price: "₦12,999.00", img: images.image17 },
+    { id: 5, name: "Weight Gain Pills", price: "₦6,999.00", img: images.image18 },
+    { id: 6, name: "Weight Gain Mini-set", price: "₦18,999.00", img: images.image19 },
+    { id: 7, name: "Weight Gain Full-set", price: "₦37,999.00", img: images.image20 },
+    { id: 8, name: "Breast Enhancement Pills", price: "₦17,999.00", img: images.image21 },
 ];
 
 const Main = () => {

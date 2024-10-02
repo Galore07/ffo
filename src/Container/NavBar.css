@@ -32,6 +32,8 @@ nav {
     padding: 0;
     display: flex;
     margin-right: 24px;
+
+    z-index: 1000;
   }
   
   .navbar-menu li {
@@ -41,11 +43,20 @@ nav {
     
   }
 
+  /* new  */
+  .navbar-menu-toggle {
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+}
+
+
   .navbar-menu-toggle span {
-    width: 25px;
-    height: 3px;
+    width: 23px;
+    height: 1.9px;
     background: white;
     margin: 2px 0;
+    margin-left: 55px;
   }
 
   .navbar-menu li:hover{
@@ -57,6 +68,18 @@ nav {
     color: rgb(252, 167, 10);
   }
 
+  .close-menu{
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: transparent;
+      border: none;
+      display: none; /* Initially hidden */
+  }
+
 
 
   @media (max-width: 768px) {
@@ -66,23 +89,45 @@ nav {
     }
   
     .navbar-menu {
-      display: none; /* Hide menu by default on small screens */
+      display: none;
       flex-direction: column;
-      width: 100%; /* Full width on small screens */
-      margin-top: 20px;
+      width: 100vh; 
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9); 
+      /* justify-content: center; */
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
   }
 
   .navbar-menu.open {
       display: flex; /* Show menu when open */
+      opacity: 1;
   }
 
   .navbar-menu li {
       margin-left: 0;
       margin-bottom: 10px;
-      padding: 10px;
-      background-color: #444; /* Optional: Add background for better visibility */
-      width: 100%; /* Make items full-width */
+      padding: 20px;
+      background-color: #444;
+      width: 100%; 
+      /* text-align: center; */
+
   }
+
+  .close-menu {
+    font-weight: bold;
+    color: orange;
+    cursor: pointer;
+    top: 20px;
+    text-align: center;
+    margin-left: 100px;
+    display: block;
+}
 }
 
 @media (max-width: 480px) {
@@ -97,32 +142,4 @@ nav {
   
   
   
-  /* @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .navbar-brand {
-      justify-content: center;
-    }
-    .navbar-menu {
-      flex-direction: column;
-      margin-top: 20px;
-    }
-    .navbar-menu li {
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .navbar-brand img {
-      width: 100px;
-      height: 45px;
-    }
-    .navbar-brand span {
-      font-size: 14px;
-    }
-  } */
-  
-
+ 
