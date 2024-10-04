@@ -3,6 +3,7 @@ import images from '../assets/Image';
 import "../Container/NavBar.css";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { PiShoppingCartSimpleBold } from "react-icons/pi";
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -50,6 +51,10 @@ const NavBar = () => {
 
                 </ul>
             </i>
+
+            <div>
+                <PiShoppingCartSimpleBold className="cart"/>
+            </div>
         </nav>
     );
 };
