@@ -31,13 +31,13 @@ nav {
   margin: 0;
   padding: 0;
   display: flex;
-  margin-left: 400px;
-  gap: 2px;
+  /* margin-left: 400px; */
+  gap: 0px;
   z-index: 1000;
 }
 
 .navbar-menu li {
-  margin-left: 20px;
+  margin-left: 50px;
   font-size: 15px;
   /* font-weight: bold; */
 
@@ -54,14 +54,16 @@ nav {
   width: 25px;
   height: 21px;
   margin: 5px;
+  color: rgb(252, 167, 10);
 }
 
 .navbar-menu-toggle span {
   width: 23px;
   height: 1.9px;
-  background: white;
+  /* background: white; */
+  background: rgb(252, 167, 10);
   margin: 2px 0;
-  margin-left: 55px;
+  margin-left: 40px;
 }
 
 .navbar-menu li:hover {
@@ -79,7 +81,7 @@ nav {
   cursor: pointer;
   position: absolute;
   top: 20px;
-  right: 30px;
+  right: 0px;
   background: transparent;
   border: none;
   display: none;
@@ -95,34 +97,40 @@ nav {
   }
 
   .navbar-menu {
-    display: none;
+    /* display: none; */
     flex-direction: column;
-    width: 100vh;
-
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    /* margin-right: 400px; */
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
-    /* justify-content: center; */
+    justify-content: center;
+    visibility: hidden;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
   .navbar-menu.open {
-    display: flex;
-    /* Show menu when open */
+    /* display: flex; */
     opacity: 1;
+    visibility: visible;
   }
+
+  /* .navbar-brand img{
+    width: 50%;
+    height: 50px;
+  } */
 
   .navbar-menu li {
     margin-left: 0;
-    margin-bottom: 10px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 25px;
     background-color: #444;
     width: 100%;
-    /* text-align: center; */
+    text-align: center;
 
   }
 
@@ -130,17 +138,17 @@ nav {
     font-weight: bold;
     color: orange;
     cursor: pointer;
-    top: 20px;
+    top: 1px;
     text-align: center;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     display: block;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-brand img {
-    width: 100px;
-    height: 45px;
+    width: 110px;
+    height: 50px;
   }
 
   .navbar-brand span {

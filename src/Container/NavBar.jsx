@@ -52,7 +52,7 @@ const NavBar = () => {
                 </ul>
             </i>
 
-            <div>
+            <div className='arrow'>
                 <PiShoppingCartSimpleBold className="cart"/>
             </div>
         </nav>
