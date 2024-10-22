@@ -48,9 +48,11 @@ const Cart = ({ onClose }) => {
                     </li>
                 ))}
             </ul>
-            <div>Total Items: {totalQuantity}</div>
-            <div>Total Price: ₦{calculateTotalPrice()}</div>
-            <button className='out' onClick={handleCheckout}>Checkout</button>
+            <div className='dav'>
+                <div>Total Items: {totalQuantity}</div>
+                <div>Total Price: ₦{calculateTotalPrice()}</div>
+                <button className='out' onClick={handleCheckout}>Checkout</button>
+            </div>
         </div>
     );
 };
