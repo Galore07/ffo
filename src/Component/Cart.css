@@ -1,0 +1,257 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 6px 0;
+    gap: 20px;
+}
+
+.item-image-name {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .item-name {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 150px;
+} */
+
+/* .item-price {
+    font-size: 12px;
+    color: #666; 
+} */
+
+.make {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mat {
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+}
+
+.out {
+    background-color: black;
+    color: white;
+    padding: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.waste {
+    height: 20px;
+    width: 16px;
+    color: red;
+    margin: 4px;
+}
+
+.cart-modal {
+    position: fixed;
+    top: 18%;
+    right: 3%;
+    width: 512px;
+    height: 80vh;
+    background: white;
+    padding: 0;
+    padding-left: 10px;
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    overflow-y: auto;
+}
+
+/* .cart-modal h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    padding: 10px 0;
+    margin: 0;
+} */
+
+.set{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    font-weight: bold;
+    font-size: 18px;
+    background: white;
+    top: 0;
+    height: 60px;
+}
+
+.cart-modal ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* .cart-modal li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+    padding: 6px 0;
+}  */
+
+.cart-modal img {
+    width: 50px;
+    height: 50px;
+}
+
+.close-modal {
+    margin-right: 7px;
+    cursor: pointer;
+} 
+
+.out{
+    background-color: black;
+    color: white;
+    padding: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.mat{
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+}
+
+.mat:hover{
+    background-color: rgba(128, 128, 128, 0.454);
+    transition: 1s;
+}
+
+.make{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.neat{
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    /* font-weight: bold; */
+    max-width: 10px; /* Adjust as per your need */
+    margin-right: 90px;
+}
+
+.detty{
+    font-weight: bold;
+}
+
+.waste{
+    height: 20px;
+    width: 16px;
+    color: black;
+    margin-right: 25px;
+}
+
+@media (max-width: 768px) {
+    .cart-modal {
+        width: 90%; /* Make the modal take most of the screen */
+        top: 15%;   /* Adjust position */
+        right: 5%;  /* Adjust position */
+        height: 75vh; /* Slightly reduce height */
+        padding: 0;
+    }
+
+    .cart-modal li {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .make {
+        justify-content: flex-start; /* Keep buttons aligned to the left */
+        gap: 5px; /* Reduce gap */
+    }
+
+    .out {
+        padding: 6px 8px; /* Slightly increase padding for better touch targets */
+        font-size: 13px;
+    }
+
+    .mat {
+        width: 25px; /* Adjust button size for smaller screens */
+        height: 25px;
+    }
+}
+
+/* Responsive for mobile phones (screens less than 480px) */
+@media (max-width: 480px) {
+    .cart-modal {
+        width: 95%;
+        top: 13%;
+        right: 2.5%;
+        height: 80vh;
+        padding: 0; 
+    }
+
+    .cart-modal h2 {
+        font-size: 20px;
+        margin-left: 9px;
+    }
+
+
+    .cart-modal li {
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px;
+    }
+
+    .cart-modal img {
+        width: 45px; /* Smaller image */
+        height: 45px;
+    }
+
+    .make {
+        gap: 5px;
+    }
+
+    .out {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .mat {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .waste {
+        width: 21px;
+        height: 50px;
+        padding-bottom: 25px;
+    }
+
+    .close-modal {
+        margin-right: 16px;
+    }
+}

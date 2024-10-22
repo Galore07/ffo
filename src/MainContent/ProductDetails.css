@@ -16,12 +16,32 @@
     margin-top: 15px;
 }
 
-.eptic{
-    background-color: black;
-    width: 150px;
-    height: 50px;
-    color: white;
+.mantra{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 15px;
+    height: 60px;
+    width: 400px;
+    gap: 4px;
+}
+.eptic:hover{
+    background-color: rgb(252, 167, 10);
+    transition: 1s;
+}
+.lemo:hover{
+    background-color: rgba(128, 128, 128, 0.699);
+    transition: 1s;
+}
 
+.lemo{
+    border: 2px solid black;
+    width: 120px;
+    height: 35px;
+    color: black;
+    margin-left: 6px;
+    font-weight: bold;
+    margin: 2px;
 }
 
 .photo{
@@ -29,25 +49,6 @@
     height: 700px;
     padding: 30px;
     /* border: 5px solid #333; */
-}
-
-.mantra{
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-    height: 60px;
-    width: 200px;
-    gap: 2px;
-    /* border: 1px solid red; */ 
-}
-
-.number{
-    width: 40px;
-    height: 50px;
-    margin: 2px;
-    border-radius: 1px;
-    padding: 4px;
-    border: 2px solid  black;
 }
 
 .aura{
@@ -75,22 +76,23 @@
 
     .mantra {
         width: 100%; /* Full width */
+        display: flex;
         justify-content: center; /* Center the content */
-        /* align-items: center; */
+        align-items: center;
         margin-top: 20px; /* Add margin to the top */
     }
 
     .eptic {
         width: 100%; /* Full width button */
         height: 45px; /* Adjust button height */
-        margin-top: 15px; /* Add margin for spacing */
+        /* margin-top: 15px;  */
     }
 }
 
 /* For extra small screens (up to 480px) */
 @media (max-width: 480px) {
     .nameee {
-        font-size: 16px; /* Further reduce font size */
+        font-size: 16px; 
     }
 
     .priceee {
@@ -98,22 +100,25 @@
     }
 
     .photo {
-        width: 100%; /* Make the image take full width */
-        padding: 5px; /* Reduce padding for smaller screens */
+        width: 100%;
+        padding: 5px; 
     }
 
     .mantra {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .number {
-        width: 40px; /* Full width */
-        height: 40px;
+        gap: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .eptic {
-        width: 160%;
-        height: 50px;
+        width: 80%;
+        height: 40px;
+    }
+
+    .iyore{
+        height: 40px;
+        width: 50px;
+
     }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './Container/NavBar';
 import HeroSection from './Component/HeroSection';
@@ -13,13 +14,17 @@ import Bags from './MainContent/Bags';
 import HandBags from './BagsPd/HandBags';
 import Featured from './FeaturedPd/Featured';
 import ProductInfos from './BagsPd/ProductInfos';
+import Cart from './Component/Cart';
 
 
 const App = () => {
+  const [cartOpen, setCartOpen] = useState(false);
+
   return (
     <BrowserRouter>
       <div className='container'>
-        <NavBar />
+        <NavBar toggleCart={() => setCartOpen(true)} />
+          
         <Routes>
           <Route path="/" element={
             <>
@@ -38,9 +43,14 @@ const App = () => {
           <Route path="/product-info/:id" element={<ProductInfos />} />
         </Routes>
         <Footer />
+
+        {/* display cart modal if open */}
+       {cartOpen && (
+        <Cart onClose={() => setCartOpen(false)} />
+       )}
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

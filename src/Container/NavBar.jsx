@@ -4,9 +4,13 @@ import "../Container/NavBar.css";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
+import { useSelector } from 'react-redux';
 
-const NavBar = () => {
+
+const NavBar = ({toggleCart}) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    // const [cartOpen, setCartOpen] = useState(false); 
+    const cartCount = useSelector(state => state.cartCount.totalQuantity);   // get total items count from redux
 
     return (
         <nav>
@@ -24,8 +28,8 @@ const NavBar = () => {
                     <span></span>
                 </div>
             )}
+            
 
-            <i>
                 <ul className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
 
                     <li className="close-menu" onClick={() => setMenuOpen(false)}>X</li>
@@ -50,11 +54,14 @@ const NavBar = () => {
                     </li>
 
                 </ul>
-            </i>
+            
 
             <div className='arrow'>
-                <PiShoppingCartSimpleBold className="cart"/>
+                <PiShoppingCartSimpleBold className="cart" onClick={toggleCart} />
+                <span className='cart-count'>{cartCount}</span>
             </div>
+
+            {/* {cartOpen && <Cart onClose={() => setCartOpen(false)} />} */}
         </nav>
     );
 };

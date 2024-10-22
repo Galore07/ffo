@@ -1,6 +1,7 @@
 nav {
   display: flex;
   justify-content: space-between;
+  /* justify-content: center; */
   align-items: center;
   padding: 9px;
   background-color: #333;
@@ -31,9 +32,10 @@ nav {
   margin: 0;
   padding: 0;
   display: flex;
-  /* margin-left: 400px; */
+  margin-left: 250px;
   gap: 0px;
   z-index: 1000;
+  justify-content: flex-end;
 }
 
 .navbar-menu li {
@@ -43,11 +45,26 @@ nav {
 
 }
 
-/* new  */
-.navbar-menu-toggle {
-  cursor: pointer;
-  display: none;
-  z-index: 1001;
+.arrow{
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px; /* Position it at the top, adjust as needed */
+  right: -4px; /* Position it to the right, adjust as needed */
+  background-color: rgb(241, 6, 6); /* Background color for the cart count */
+  color: white; /* Text color */
+  border-radius: 50%; /* Make it circular */
+  padding: 2px 6px; /* Adjust the size of the badge */
+  font-size: 11px; /* Adjust the font size for the count */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17px; /* Fix size for circular appearance */
+  height: 17px; /* Fix size for circular appearance */
 }
 
 .cart {
@@ -57,10 +74,16 @@ nav {
   color: rgb(252, 167, 10);
 }
 
+/* this */
+.navbar-menu-toggle {
+  cursor: pointer;
+  display: none;
+  z-index: 1001;
+}
+
 .navbar-menu-toggle span {
   width: 23px;
   height: 1.9px;
-  /* background: white; */
   background: rgb(252, 167, 10);
   margin: 2px 0;
   margin-left: 40px;
@@ -89,7 +112,6 @@ nav {
 }
 
 
-
 @media (max-width: 768px) {
   .navbar-menu-toggle {
     display: flex;
@@ -103,7 +125,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    /* margin-right: 400px; */
+    margin-left: 0px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
@@ -118,11 +140,6 @@ nav {
     opacity: 1;
     visibility: visible;
   }
-
-  /* .navbar-brand img{
-    width: 50%;
-    height: 50px;
-  } */
 
   .navbar-menu li {
     margin-left: 0;

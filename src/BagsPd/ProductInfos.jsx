@@ -1,5 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../redux/cartCountSlice';
 import images from '../assets/Image';
 
 
@@ -24,11 +26,20 @@ const products = [
 ];
 
 const ProductInfos = () => {
-
     const { id } = useParams();
+    const dispatch = useDispatch();
     const product = products.find(prod => prod.id === parseInt(id));
 
     if (!product) return <div>Product not found!</div>;
+
+    const addToCart = () => {
+        dispatch(addItem({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            img: product.img,
+        }));
+    };
 
     return (
         <>
@@ -39,8 +50,8 @@ const ProductInfos = () => {
                     <p className='priceee'>{product.price}</p>
                     {/* <p>{product.description}</p> */}
                     <div className='mantra'>
-                        <input type="number" className='number' />
-                        <button className='eptic'>Add to Cart</button>
+                        <button className='lemo' onClick={addToCart}>Add to Cart</button>
+                        <button className='lemo'>Buy Now</button>
                     </div>
                 </div>
             </div>
